@@ -1,11 +1,14 @@
 from pexel import *
 import subprocess
 import shutil
+import getpass
 
+"""This script only works for KDE5. Try at your own risk"""
 # Config.read('/home/wolfmeist/.config/plasma-org.kde.plasma.desktop-appletsrc')
 # get the image file name
 image_location = resize_image()
-filename = '/home/wolfmeist/.config/plasma-org.kde.plasma.desktop-appletsrc'
+user = getpass.getuser()
+filename = '/home/' + user + '/.config/plasma-org.kde.plasma.desktop-appletsrc'
 # temporary file to store the edits
 outputfile = 'plasma-org.kde.plasma.desktop-appletsrc'
 Edited = False
