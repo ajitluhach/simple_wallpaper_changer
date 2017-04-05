@@ -86,6 +86,7 @@ def download_image():
     request = Request(download_url, None, headers)
     image_name = location + i_name
     if os.path.isfile(image_name):
+        print("File already present, getting new file")
         download_image()
     f = open(image_name, 'wb')
     f.write(urlopen(request).read())
