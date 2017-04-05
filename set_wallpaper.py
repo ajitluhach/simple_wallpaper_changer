@@ -1,4 +1,4 @@
-from pexel import *
+from download_image import *
 import subprocess
 import shutil
 import getpass
